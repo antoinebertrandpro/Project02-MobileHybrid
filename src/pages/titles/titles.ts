@@ -2,26 +2,23 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the SectionsPage page.
+ * Generated class for the TitlesPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
 
 @Component({
-  selector: 'page-sections',
-  templateUrl: 'sections.html',
+  selector: 'page-titles',
+  templateUrl: 'titles.html',
 })
-export class SectionsPage {
-
-public service:any
+export class TitlesPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-  	this.service = this.navParams.get('service');
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SectionsPage');
+    console.log('ionViewDidLoad TitlesPage');
   }
 
 }

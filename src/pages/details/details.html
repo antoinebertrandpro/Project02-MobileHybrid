@@ -14,5 +14,16 @@
 
 
 <ion-content padding>
-
+	<div>
+		<b>{{ article.title }}</b>
+		<br>
+		<em>{{ article.pubDate }}</em>
+		<br/>
+		<br/>
+		<div [innerHTML]="article.content"></div>
+		<br/>
+		<br/>
+		<small>{{ article.author }}</small>
+		<br>
+	</div>
 </ion-content>

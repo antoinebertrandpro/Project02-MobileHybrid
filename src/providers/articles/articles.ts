@@ -10,10 +10,13 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class ArticlesProvider {
 
-public articles:any
-
   constructor(public http: HttpClient) {
     console.log('Hello ArticlesProvider Provider');
   }
+
+	getArticles(rss) {
+		console.log("https://api.rss2json.com/v1/api.json?rss_url=" + rss);
+		return (this.http.get("https://api.rss2json.com/v1/api.json?rss_url=" + rss));
+	}
 
 }

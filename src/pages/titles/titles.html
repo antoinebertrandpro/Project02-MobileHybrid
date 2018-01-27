@@ -7,12 +7,23 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>titles</ion-title>
+    <ion-title>Articles</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+	<ion-list>
+		<div ion-item *ngFor="let a of (rssfeed | async)?.items" (click)="articleSelected(a)">
+  			<b>{{ a.title }}</b>
+  			<br/>
+  			<ion-avatar item-left>
+  				<img src="{{ a.thumbnail }}">
+  			</ion-avatar>
+  			<em>{{ a.link }}</em>
+  			<br/>
+  			{{ a.pubDate }}
+  		</div> 
+	</ion-list>
 </ion-content>

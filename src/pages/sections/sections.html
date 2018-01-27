@@ -7,12 +7,16 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>sections</ion-title>
+    <ion-title>Sections</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+	<ion-list>
+		<ion-item *ngFor="let s of service.sections" (click)="sectionSelected(s)">
+  			<b>{{ s.name }}</b>
+  		</ion-item> 
+	</ion-list>
 </ion-content>

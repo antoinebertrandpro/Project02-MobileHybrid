@@ -8,11 +8,11 @@
 
 <ion-content padding>
   <ion-list>
-  	<ion-item *ngFor="let s of services | async" (click)=serviceSelected(p)>
+  	<div ion-item *ngFor="let s of services | async" (click)=serviceSelected(s)>
   		<ion-avatar item-left>
   			<img src="{{ s.icon }}">
   		</ion-avatar>
   		{{ s.name }}
-  	</ion-item> 
+  	</div> 
   </ion-list>
 </ion-content>

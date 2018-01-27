@@ -10,6 +10,9 @@ import { ArticlesProvider } from '../providers/articles/articles';
 import { ServicesProvider } from '../providers/services/services';
 import { SectionsProvider } from '../providers/sections/sections';
 
+import { AngularFireModule } from 'angularfire2';
+import { firebaseConfig } from '../environnement';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -17,6 +20,7 @@ import { SectionsProvider } from '../providers/sections/sections';
   ],
   imports: [
     BrowserModule,
+    AngularFireModule.initializeApp(firebaseConfig),
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],

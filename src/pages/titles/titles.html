@@ -18,7 +18,7 @@
 		<div ion-item *ngFor="let a of (rssfeed | async)?.items" (click)="articleSelected(a)">
   			<b>{{ a.title }}</b>
   			<br/>
-  			<ion-avatar item-left>
+  			<ion-avatar item-left *ngIf="a.thumbnail">
   				<img src="{{ a.thumbnail }}">
   			</ion-avatar>
   			<em>{{ a.link }}</em>

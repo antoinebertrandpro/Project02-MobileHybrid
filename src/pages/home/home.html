@@ -1,14 +1,18 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Service Providers
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-list>
+  	<ion-item *ngFor="let s of services | async" (click)=serviceSelected(p)>
+  		<ion-avatar item-left>
+  			<img src="{{ s.icon }}">
+  		</ion-avatar>
+  		{{ s.name }}
+  	</ion-item> 
+  </ion-list>
 </ion-content>

@@ -1,5 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { AngularFirestore } from 'angularfire2/firestore'
 
 /*
   Generated class for the ServicesProvider provider.
@@ -10,8 +10,11 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class ServicesProvider {
 
-  constructor(public http: HttpClient) {
+  constructor(public db: AngularFirestore) {
     console.log('Hello ServicesProvider Provider');
   }
 
+  getServices() {
+  	return this.db.collection('services').valueChanges();
+  }
 }

@@ -10,6 +10,8 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class ArticlesProvider {
 
+public articles:any
+
   constructor(public http: HttpClient) {
     console.log('Hello ArticlesProvider Provider');
   }
